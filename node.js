@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
 const app = express();
+const port = process.env.PORT || 8000
 app.use(bodyParser.urlencoded({extended:true}));
 // app.get("/", function(req,res){
 //     res.send("Hello Nen Home page")
@@ -48,6 +49,6 @@ app.post("/", function(req,res) {
 //     res.send("Hello aBOUT")
 // })
 
-app.listen(8000,function(){
+app.listen(port,function(){
     console.log("Hello GGuys");
 })
